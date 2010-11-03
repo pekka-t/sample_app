@@ -12,7 +12,9 @@ group :development do
 end
 
 group :test do
+  gem 'webrat'
   gem 'rspec'
+#  gem 'webrat'
 end
 
 # Use unicorn as the web server
