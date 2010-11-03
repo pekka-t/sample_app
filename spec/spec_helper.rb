@@ -25,4 +25,11 @@ RSpec.configure do |config|
   # instead of true.
   config.use_transactional_fixtures = true
 
+  # Found this advice from
+  # https://github.com/rspec/rspec-rails/issues#issue/140
+  # See also
+  # http://www.mail-archive.com/rspec-users@rubyforge.org/msg16342.html
+  config.before(:each) { Webrat.configuration.mode = :rails }
+
+
 end
