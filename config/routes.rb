@@ -4,6 +4,7 @@ SampleApp::Application.routes.draw do
   get "pages/contact"
   get "pages/about"
   get "pages/help"
+  get "pages/signin"
   get "users/new"
 
   match '/contact', :to => 'pages#contact'

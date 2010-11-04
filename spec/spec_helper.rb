@@ -2,6 +2,7 @@
 ENV["RAILS_ENV"] ||= 'test'
 require File.expand_path("../../config/environment", __FILE__)
 require 'rspec/rails'
+require 'webrat'
 
 # Requires supporting ruby files with custom matchers and macros, etc,
 # in spec/support/ and its subdirectories.
@@ -25,11 +26,9 @@ RSpec.configure do |config|
   # instead of true.
   config.use_transactional_fixtures = true
 
-  # Found this advice from
-  # https://github.com/rspec/rspec-rails/issues#issue/140
-  # See also
-  # http://www.mail-archive.com/rspec-users@rubyforge.org/msg16342.html
+  # See
+  # https://github.com/rspec/rspec-rails/issues/labels/ \
+  #  need%20fix%20in%20webrat#issue/140
   config.before(:each) { Webrat.configuration.mode = :rails }
-
 
 end
